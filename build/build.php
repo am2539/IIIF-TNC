@@ -553,7 +553,7 @@ function writePage ($name, $d)
 		 $codeHTML = displayCodeSection ($d, "Page JSON Object");		 
 		 if (isset($d["file"]) and $d["file"])
 			{$fcont = getRemoteJsonDetails($d["file"], false, true);
-			 $format = "json"
+			 $format = "json";
 			if (!$fcont) {
 				$fcont = getRemoteJsonDetails($d["file"], false, false);
 				$fcont = explode(PHP_EOL, trim($fcont));
