@@ -553,7 +553,7 @@ function writePage ($name, $d)
 		 $codeHTML = displayCodeSection ($d, "Page JSON Object");		 
 		 if (isset($d["file"]) and $d["file"])
 			{$fcont = getRemoteJsonDetails($d["file"], false, true);
-			 $format = "json"
+			 $format = "json";
 			if (!$fcont) {
 				$fcont = getRemoteJsonDetails($d["file"], false, false);
 				$fcont = explode(PHP_EOL, trim($fcont));
@@ -799,7 +799,7 @@ function positionExtraContent ($d, $extra)
 	return ($d);
 	}
 
-function OLDpositionExtraContent ($str, $estra)
+function OLDpositionExtraContent ($str, $extra)
 	{
 	$count = 0;
 	$str = preg_replace('/\[[#][#]\]/', $extra, $str, -1, $count);
