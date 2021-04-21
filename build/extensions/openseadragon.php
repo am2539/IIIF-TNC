@@ -59,7 +59,7 @@ END;
     height:     500px;
     border:     1px solid black;
     color:      #333; /* text color for messages */
-    background-color: black;
+    background-color: white;
 }";
 	
 	$d = positionExtraContent ($d, '<div class="row" style="padding-left:16px;padding-right:16px;"><div class="col-12 col-lg-12"><div id="openseadragonviewerdiv" class="openseadragon"></div></div></div>');
