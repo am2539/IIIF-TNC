@@ -785,7 +785,7 @@ END;
 	}
 
 
-function positionExtraContent ($str, $extra)
+function positionExtraContent ($d, $extra)
 	{
 	$count = 0;
 	
