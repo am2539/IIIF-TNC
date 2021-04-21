@@ -785,7 +785,7 @@ END;
 	}
 
 
-function positionExtraContent ($str, $extra)
+function positionExtraContent ($d, $extra)
 	{
 	$count = 0;
 	
@@ -799,7 +799,7 @@ function positionExtraContent ($str, $extra)
 	return ($d);
 	}
 
-function OLDpositionExtraContent ($str, $estra)
+function OLDpositionExtraContent ($str, $extra)
 	{
 	$count = 0;
 	$str = preg_replace('/\[[#][#]\]/', $extra, $str, -1, $count);
