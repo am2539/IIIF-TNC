@@ -10,9 +10,9 @@
 		},
 	"windows": [
 		{ "id": "a",
-			"manifestId": "https://data.getty.edu/museum/api/iiif/865/manifest.json" },
+			"manifestId": "https://data.ng-london.org.uk/iiif/0CWR-0001-0000-0000/manifest" },
 		{ "id": "b",
-			"manifestId": "https://data.getty.edu/museum/api/iiif/248/manifest.json" },
+			"manifestId": "https://iiif.vam.ac.uk/collections/O18966/manifest.json" },
 		{ "id": "c",
 			"manifestId": "https://media.nga.gov/public/manifests/nga_highlights.json",
 			"canvasId":"https://media.nga.gov/public/manifests/canvas/1225.json"},
