@@ -15,8 +15,7 @@
       "direction": "row",
       "first": {
         "first": "a",
-        "second": "b",
-        "direction": "column"
+        "second": "b"
       },
    
       "splitPercentage": 50.50
