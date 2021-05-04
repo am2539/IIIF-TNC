@@ -85,7 +85,7 @@ details[open] summary {
 		<pre style="overflow-y: auto;overflow-x: hidden; border: 2px solid black;padding: 10px;max-height:400px;"><code>{
     &quot;parent&quot;: &quot;&quot;,
     &quot;class&quot;: &quot;mirador&quot;,
-    &quot;file&quot;: &quot;mirador-complex.json&quot;,
+    &quot;file&quot;: &quot;mirador.json&quot;,
     &quot;title&quot;: &quot;&lt;b&gt;The Zoom of the Week&quot;,
     &quot;content&quot;: &quot;&lt;p&gt;Each week of the project we'll be highlighting a deep zoom image from one of our project partners' collections. On this site you can explore the full image via the [IIIF|https://iiif.io] image viewer [Mirador|https://projectmirador.org/], find links to related IIIF content and additional information about the image selected each week. &lt;/p&gt;&lt;div class=\&quot;alert alert-info\&quot; role=\&quot;alert\&quot;&gt;&lt;h4 class=\&quot;alert-heading\&quot;&gt;Week 1,  April 22&lt;sup&gt;nd&lt;/sup&gt; 2021&lt;/h4&gt;&lt;p&gt;Hans Holbein the Younger's &lt;i&gt;The Ambassadors&lt;/i&gt;.&lt;/p&gt;&lt;/div&gt;&lt;div class=\&quot;row\&quot; style=\&quot;padding-left:16px;padding-right:16px;\&quot;&gt;&lt;div class=\&quot;col-12 col-lg-12\&quot;&gt;&lt;div style=\&quot;height:500px;\&quot; id=\&quot;mirador\&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&quot;,
     &quot;content right&quot;: &quot;&quot;,
@@ -96,50 +96,23 @@ details[open] summary {
 	<figure>
 		<pre style="overflow-y: auto;overflow-x: hidden; border: 2px solid black;padding: 10px;max-height:400px;"><code>{
     &quot;manifests&quot;: {
-        &quot;https://data.ng-london.org.uk/iiif/0CWR-0001-0000-0000/manifest&quot;: {
+        &quot;https://data.ng-london.org.uk/iiif/0CWR-0001-0000-0000/manifest.json&quot;: {
             &quot;provider&quot;: &quot;The National Gallery&quot;
         },
         &quot;https://iiif.vam.ac.uk/collections/O18966/manifest.json&quot;: {
             &quot;provider&quot;: &quot;The Victoria and Albert Museum&quot;
-        },
-        &quot;https://media.nga.gov/public/manifests/nga_highlights.json&quot;: {
-            &quot;provider&quot;: &quot;National Gallery of Art&quot;
-        },
-        &quot;https://iiif.harvardartmuseums.org/manifests/object/299964&quot;: {
-            &quot;provider&quot;: &quot;Harvard Art Museums&quot;
-        },
-        &quot;https://collections.frick.org/apis/iiif/presentation/v2/objects-266/manifest&quot;: {
-            &quot;provider&quot;: &quot;The Frick Collection&quot;
-        },
-        &quot;https://media.ng-london.org.uk/iiif/001-043H-0000/manifest.json&quot;: {
-            &quot;provider&quot;: &quot;The National Gallery&quot;
         }
     },
     &quot;windows&quot;: [
         {
-            &quot;id&quot;: &quot;a&quot;,
-            &quot;manifestId&quot;: &quot;https://data.ng-london.org.uk/iiif/0CWR-0001-0000-0000/manifest&quot;
+            &quot;manifestId&quot;: &quot;https://data.ng-london.org.uk/iiif/0CWR-0001-0000-0000/manifest.json&quot;,
+            &quot;canvasIndex&quot;: 0
         },
         {
-            &quot;id&quot;: &quot;b&quot;,
-            &quot;manifestId&quot;: &quot;https://iiif.vam.ac.uk/collections/O18966/manifest.json&quot;
-        },
-        {
-            &quot;id&quot;: &quot;c&quot;,
-            &quot;manifestId&quot;: &quot;https://media.nga.gov/public/manifests/nga_highlights.json&quot;,
-            &quot;canvasId&quot;: &quot;https://media.nga.gov/public/manifests/canvas/1225.json&quot;
+            &quot;manifestId&quot;: &quot;https://iiif.vam.ac.uk/collections/O18966/manifest.json&quot;,
+            &quot;canvasIndex&quot;: 1
         }
-    ],
-    &quot;workspace&quot;: {
-        &quot;layout&quot;: {
-            &quot;direction&quot;: &quot;row&quot;,
-            &quot;first&quot;: &quot;a&quot;
-        },
-        &quot;second&quot;: {
-            &quot;first&quot;: &quot;b&quot;
-        }
-    },
-    &quot;splitPercentage&quot;: 50.5
+    ]
 }</code></pre>
 		<figcaption class=\"figure-caption\">The complete extension file used to define extra content included in this page.</figcaption>
 	</figure>	
@@ -170,10 +143,10 @@ details[open] summary {
 
 var myMiradorInstance = Mirador.viewer({
        id: "mirador",
-       windows: [{"id":"a","manifestId":"https:\/\/data.ng-london.org.uk\/iiif\/0CWR-0001-0000-0000\/manifest"},{"id":"b","manifestId":"https:\/\/iiif.vam.ac.uk\/collections\/O18966\/manifest.json"},{"id":"c","manifestId":"https:\/\/media.nga.gov\/public\/manifests\/nga_highlights.json","canvasId":"https:\/\/media.nga.gov\/public\/manifests\/canvas\/1225.json"}],
-       manifests: {"https:\/\/data.ng-london.org.uk\/iiif\/0CWR-0001-0000-0000\/manifest":{"provider":"The National Gallery"},"https:\/\/iiif.vam.ac.uk\/collections\/O18966\/manifest.json":{"provider":"The Victoria and Albert Museum"},"https:\/\/media.nga.gov\/public\/manifests\/nga_highlights.json":{"provider":"National Gallery of Art"},"https:\/\/iiif.harvardartmuseums.org\/manifests\/object\/299964":{"provider":"Harvard Art Museums"},"https:\/\/collections.frick.org\/apis\/iiif\/presentation\/v2\/objects-266\/manifest":{"provider":"The Frick Collection"},"https:\/\/media.ng-london.org.uk\/iiif\/001-043H-0000\/manifest.json":{"provider":"The National Gallery"}},
+       windows: [{"manifestId":"https:\/\/data.ng-london.org.uk\/iiif\/0CWR-0001-0000-0000\/manifest.json","canvasIndex":0},{"manifestId":"https:\/\/iiif.vam.ac.uk\/collections\/O18966\/manifest.json","canvasIndex":1}],
+       manifests: {"https:\/\/data.ng-london.org.uk\/iiif\/0CWR-0001-0000-0000\/manifest.json":{"provider":"The National Gallery"},"https:\/\/iiif.vam.ac.uk\/collections\/O18966\/manifest.json":{"provider":"The Victoria and Albert Museum"}},
        
-       workspace: {"layout":{"direction":"row","first":"a"},"second":{"first":"b"}}
+       
        });     
      });
 			function onLoad() {
