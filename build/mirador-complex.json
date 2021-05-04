@@ -20,22 +20,11 @@
   "workspace": {
     "layout": {
       "direction": "row",
-      "first": {
-        "first": "a",
-        "direction": "column"
+      "first": "a"
       },
       "second": {
-        "first": {
-          "first": "b",
-          "direction": "column"
-        },
-        "second": {
-          "first": "c",
-          "direction": "column"
-        },
-        "direction": "row"
+        "first": "b"
+        }
       },
-      "splitPercentage": 33.33
-    }
-  }
+      "splitPercentage": 50.50
 	}
