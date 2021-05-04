@@ -1,6 +1,6 @@
   {
 	"manifests": {
-		"https://data.ng-london.org.uk/iiif/0CWR-0001-0000-0000/manifest.json": {
+		"https://data.ng-london.org.uk/iiif/0CWR-0001-0000-0000/manifest": {
 			"provider": "The National Gallery"
 		},
 		"https://iiif.vam.ac.uk/collections/O18966/manifest.json": {
@@ -8,7 +8,7 @@
 		}
 	},
 	"windows": [{
-			"manifestId": "https://data.ng-london.org.uk/iiif/0CWR-0001-0000-0000/manifest.json",
+			"manifestId": "https://data.ng-london.org.uk/iiif/0CWR-0001-0000-0000/manifest",
 			"canvasIndex": 0
 		},
 		{
