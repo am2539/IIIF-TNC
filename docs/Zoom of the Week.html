@@ -133,24 +133,13 @@ details[open] summary {
     &quot;workspace&quot;: {
         &quot;layout&quot;: {
             &quot;direction&quot;: &quot;row&quot;,
-            &quot;first&quot;: {
-                &quot;first&quot;: &quot;a&quot;,
-                &quot;direction&quot;: &quot;column&quot;
-            },
-            &quot;second&quot;: {
-                &quot;first&quot;: {
-                    &quot;first&quot;: &quot;b&quot;,
-                    &quot;direction&quot;: &quot;column&quot;
-                },
-                &quot;second&quot;: {
-                    &quot;first&quot;: &quot;c&quot;,
-                    &quot;direction&quot;: &quot;column&quot;
-                },
-                &quot;direction&quot;: &quot;row&quot;
-            },
-            &quot;splitPercentage&quot;: 33.33
+            &quot;first&quot;: &quot;a&quot;
+        },
+        &quot;second&quot;: {
+            &quot;first&quot;: &quot;b&quot;
         }
-    }
+    },
+    &quot;splitPercentage&quot;: 50.5
 }</code></pre>
 		<figcaption class=\"figure-caption\">The complete extension file used to define extra content included in this page.</figcaption>
 	</figure>	
@@ -184,7 +173,7 @@ var myMiradorInstance = Mirador.viewer({
        windows: [{"id":"a","manifestId":"https:\/\/data.ng-london.org.uk\/iiif\/0CWR-0001-0000-0000\/manifest"},{"id":"b","manifestId":"https:\/\/iiif.vam.ac.uk\/collections\/O18966\/manifest.json"},{"id":"c","manifestId":"https:\/\/media.nga.gov\/public\/manifests\/nga_highlights.json","canvasId":"https:\/\/media.nga.gov\/public\/manifests\/canvas\/1225.json"}],
        manifests: {"https:\/\/data.ng-london.org.uk\/iiif\/0CWR-0001-0000-0000\/manifest":{"provider":"The National Gallery"},"https:\/\/iiif.vam.ac.uk\/collections\/O18966\/manifest.json":{"provider":"The Victoria and Albert Museum"},"https:\/\/media.nga.gov\/public\/manifests\/nga_highlights.json":{"provider":"National Gallery of Art"},"https:\/\/iiif.harvardartmuseums.org\/manifests\/object\/299964":{"provider":"Harvard Art Museums"},"https:\/\/collections.frick.org\/apis\/iiif\/presentation\/v2\/objects-266\/manifest":{"provider":"The Frick Collection"},"https:\/\/media.ng-london.org.uk\/iiif\/001-043H-0000\/manifest.json":{"provider":"The National Gallery"}},
        
-       workspace: {"layout":{"direction":"row","first":{"first":"a","direction":"column"},"second":{"first":{"first":"b","direction":"column"},"second":{"first":"c","direction":"column"},"direction":"row"},"splitPercentage":33.33}}
+       workspace: {"layout":{"direction":"row","first":"a"},"second":{"first":"b"}}
        });     
      });
 			function onLoad() {
