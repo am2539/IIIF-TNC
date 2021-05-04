@@ -8,7 +8,7 @@
 		{ "id": "a",
 			"manifestId": "https://data.ng-london.org.uk/iiif/0CWR-0001-0000-0000/manifest" },
 		{ "id": "b",
-			"manifestId": "https://iiif.vam.ac.uk/collections/O18966/manifest.json" },
+			"manifestId": "https://iiif.vam.ac.uk/collections/O18966/manifest.json" }
 		],
   "workspace": {
     "layout": {
