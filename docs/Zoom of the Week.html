@@ -94,36 +94,7 @@ details[open] summary {
 		<figcaption class=\"figure-caption\">The complete JSON object used to define this content and layout of this page.</figcaption>
 	</figure>		<h3>Extra extension file</h3>
 	<figure>
-		<pre style="overflow-y: auto;overflow-x: hidden; border: 2px solid black;padding: 10px;max-height:400px;"><code>{
-    &quot;manifests&quot;: {
-        &quot;https://data.ng-london.org.uk/iiif/0CWR-0001-0000-0000/manifest&quot;: {
-            &quot;provider&quot;: &quot;The National Gallery&quot;
-        },
-        &quot;https://iiif.vam.ac.uk/collections/O18966/manifest.json&quot;: {
-            &quot;provider&quot;: &quot;The Victoria and Albert Museum&quot;
-        }
-    },
-    &quot;windows&quot;: [
-        {
-            &quot;id&quot;: &quot;a&quot;,
-            &quot;manifestId&quot;: &quot;https://data.ng-london.org.uk/iiif/0CWR-0001-0000-0000/manifest&quot;
-        },
-        {
-            &quot;id&quot;: &quot;b&quot;,
-            &quot;manifestId&quot;: &quot;https://iiif.vam.ac.uk/collections/O18966/manifest.json&quot;
-        }
-    ],
-    &quot;workspace&quot;: {
-        &quot;layout&quot;: {
-            &quot;direction&quot;: &quot;row&quot;,
-            &quot;first&quot;: {
-                &quot;first&quot;: &quot;a&quot;,
-                &quot;second&quot;: &quot;b&quot;
-            },
-            &quot;splitPercentage&quot;: 50.5
-        }
-    }
-}</code></pre>
+		<pre style="overflow-y: auto;overflow-x: hidden; border: 2px solid black;padding: 10px;max-height:400px;"><code>{<br>"manifests": {<br>"https://data.ng-london.org.uk/iiif/0CWR-0001-0000-0000/manifest":<br>{"provider": "The National Gallery"}, "https://iiif.vam.ac.uk/collections/O18966/manifest.json":<br>{"provider": "The Victoria and Albert Museum"}"https://media.nga.gov/public/manifests/nga_highlights.json":<br>{"provider": "National Gallery of Art"},"https://iiif.harvardartmuseums.org/manifests/object/299964":<br>{"provider": "Harvard Art Museums"},"https://collections.frick.org/apis/iiif/presentation/v2/objects-266/manifest":<br>{"provider": "The Frick Collection"},"https://media.ng-london.org.uk/iiif/001-043H-0000/manifest.json":<br>{"provider": "The National Gallery"}<br>},<br>"windows": [<br>{ "id": "a",<br>"manifestId": "https://data.getty.edu/museum/api/iiif/865/manifest.json" },<br>{ "id": "b",<br>"manifestId": "https://data.getty.edu/museum/api/iiif/248/manifest.json" },<br>{ "id": "c",<br>"manifestId": "https://media.nga.gov/public/manifests/nga_highlights.json",<br>"canvasId":"https://media.nga.gov/public/manifests/canvas/1225.json"},<br>{ "id": "d",<br>"manifestId": "https://iiif.harvardartmuseums.org/manifests/object/299964" },<br>{ "id": "e",<br>"manifestId": "https://collections.frick.org/apis/iiif/presentation/v2/objects-266/manifest" },<br>{ "id": "f",<br>"manifestId": "https://media.ng-london.org.uk/iiif/001-043H-0000/manifest.json",<br>"canvasId":"https://media.ng-london.org.uk/public/manifests/sequence/srv/009-01XE-0000/normal.json"}<br>],<br>"workspace": {<br>"layout": {<br>"direction": "row",<br>"first": {<br>"first": "a",<br>"second": "d",<br>"direction": "column"<br>},<br>"second": {<br>"first": {<br>"first": "b",<br>"second": "e",<br>"direction": "column"<br>},<br>"second": {<br>"first": "c",<br>"second": "f",<br>"direction": "column"<br>},<br>"direction": "row"<br>},<br>"splitPercentage": 33.33<br>}<br>}<br>}<br></code></pre>
 		<figcaption class=\"figure-caption\">The complete extension file used to define extra content included in this page.</figcaption>
 	</figure>	
 	</details></div><!--/span--></div><!--/row-->    <br/>
@@ -153,10 +124,10 @@ details[open] summary {
 
 var myMiradorInstance = Mirador.viewer({
        id: "mirador",
-       windows: [{"id":"a","manifestId":"https:\/\/data.ng-london.org.uk\/iiif\/0CWR-0001-0000-0000\/manifest"},{"id":"b","manifestId":"https:\/\/iiif.vam.ac.uk\/collections\/O18966\/manifest.json"}],
-       manifests: {"https:\/\/data.ng-london.org.uk\/iiif\/0CWR-0001-0000-0000\/manifest":{"provider":"The National Gallery"},"https:\/\/iiif.vam.ac.uk\/collections\/O18966\/manifest.json":{"provider":"The Victoria and Albert Museum"}},
+       windows: ,
+       manifests: [],
        
-       workspace: {"layout":{"direction":"row","first":{"first":"a","second":"b"},"splitPercentage":50.5}}
+       
        });     
      });
 			function onLoad() {
