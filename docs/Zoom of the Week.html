@@ -85,7 +85,7 @@ details[open] summary {
 		<pre style="overflow-y: auto;overflow-x: hidden; border: 2px solid black;padding: 10px;max-height:400px;"><code>{
     &quot;parent&quot;: &quot;&quot;,
     &quot;class&quot;: &quot;mirador&quot;,
-    &quot;file&quot;: &quot;mirador-simple01.json&quot;,
+    &quot;file&quot;: &quot;mirador-complex.json&quot;,
     &quot;title&quot;: &quot;&lt;b&gt;The Zoom of the Week&quot;,
     &quot;content&quot;: &quot;&lt;p&gt;Each week of the project we'll be highlighting a deep zoom image from one of our project partners' collections. On this site you can explore the full image via the [IIIF|https://iiif.io] image viewer [Mirador|https://projectmirador.org/], find links to related IIIF content and additional information about the image selected each week. &lt;/p&gt;&lt;div class=\&quot;alert alert-info\&quot; role=\&quot;alert\&quot;&gt;&lt;h4 class=\&quot;alert-heading\&quot;&gt;Week 1,  April 22&lt;sup&gt;nd&lt;/sup&gt; 2021&lt;/h4&gt;&lt;p&gt;Hans Holbein the Younger's &lt;i&gt;The Ambassadors&lt;/i&gt;.&lt;/p&gt;&lt;/div&gt;&lt;div class=\&quot;row\&quot; style=\&quot;padding-left:16px;padding-right:16px;\&quot;&gt;&lt;div class=\&quot;col-12 col-lg-12\&quot;&gt;&lt;div style=\&quot;height:500px;\&quot; id=\&quot;mirador\&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&quot;,
     &quot;content right&quot;: &quot;&quot;,
@@ -96,8 +96,75 @@ details[open] summary {
 	<figure>
 		<pre style="overflow-y: auto;overflow-x: hidden; border: 2px solid black;padding: 10px;max-height:400px;"><code>{
     &quot;manifests&quot;: {
-        &quot;https://data.ng-london.org.uk/iiif/0CWR-0001-0000-0000/manifest&quot;: {
-            &quot;provider&quot;: &quot;The National Gallery, London UK&quot;
+        &quot;https://data.getty.edu/museum/api/iiif/865/manifest.json&quot;: {
+            &quot;provider&quot;: &quot;The J. Paul Getty Museum&quot;
+        },
+        &quot;https://data.getty.edu/museum/api/iiif/248/manifest.json&quot;: {
+            &quot;provider&quot;: &quot;The J. Paul Getty Museum&quot;
+        },
+        &quot;https://media.nga.gov/public/manifests/nga_highlights.json&quot;: {
+            &quot;provider&quot;: &quot;National Gallery of Art&quot;
+        },
+        &quot;https://iiif.harvardartmuseums.org/manifests/object/299964&quot;: {
+            &quot;provider&quot;: &quot;Harvard Art Museums&quot;
+        },
+        &quot;https://collections.frick.org/apis/iiif/presentation/v2/objects-266/manifest&quot;: {
+            &quot;provider&quot;: &quot;The Frick Collection&quot;
+        },
+        &quot;https://media.ng-london.org.uk/iiif/001-043H-0000/manifest.json&quot;: {
+            &quot;provider&quot;: &quot;The National Gallery&quot;
+        }
+    },
+    &quot;windows&quot;: [
+        {
+            &quot;id&quot;: &quot;a&quot;,
+            &quot;manifestId&quot;: &quot;https://data.getty.edu/museum/api/iiif/865/manifest.json&quot;
+        },
+        {
+            &quot;id&quot;: &quot;b&quot;,
+            &quot;manifestId&quot;: &quot;https://data.getty.edu/museum/api/iiif/248/manifest.json&quot;
+        },
+        {
+            &quot;id&quot;: &quot;c&quot;,
+            &quot;manifestId&quot;: &quot;https://media.nga.gov/public/manifests/nga_highlights.json&quot;,
+            &quot;canvasId&quot;: &quot;https://media.nga.gov/public/manifests/canvas/1225.json&quot;
+        },
+        {
+            &quot;id&quot;: &quot;d&quot;,
+            &quot;manifestId&quot;: &quot;https://iiif.harvardartmuseums.org/manifests/object/299964&quot;
+        },
+        {
+            &quot;id&quot;: &quot;e&quot;,
+            &quot;manifestId&quot;: &quot;https://collections.frick.org/apis/iiif/presentation/v2/objects-266/manifest&quot;
+        },
+        {
+            &quot;id&quot;: &quot;f&quot;,
+            &quot;manifestId&quot;: &quot;https://media.ng-london.org.uk/iiif/001-043H-0000/manifest.json&quot;,
+            &quot;canvasId&quot;: &quot;https://media.ng-london.org.uk/public/manifests/sequence/srv/009-01XE-0000/normal.json&quot;
+        }
+    ],
+    &quot;workspace&quot;: {
+        &quot;layout&quot;: {
+            &quot;direction&quot;: &quot;row&quot;,
+            &quot;first&quot;: {
+                &quot;first&quot;: &quot;a&quot;,
+                &quot;second&quot;: &quot;d&quot;,
+                &quot;direction&quot;: &quot;column&quot;
+            },
+            &quot;second&quot;: {
+                &quot;first&quot;: {
+                    &quot;first&quot;: &quot;b&quot;,
+                    &quot;second&quot;: &quot;e&quot;,
+                    &quot;direction&quot;: &quot;column&quot;
+                },
+                &quot;second&quot;: {
+                    &quot;first&quot;: &quot;c&quot;,
+                    &quot;second&quot;: &quot;f&quot;,
+                    &quot;direction&quot;: &quot;column&quot;
+                },
+                &quot;direction&quot;: &quot;row&quot;
+            },
+            &quot;splitPercentage&quot;: 33.33
         }
     }
 }</code></pre>
@@ -130,12 +197,10 @@ details[open] summary {
 
 var myMiradorInstance = Mirador.viewer({
        id: "mirador",
-       windows: [{
-					"manifestId": "https://data.ng-london.org.uk/iiif/0CWR-0001-0000-0000/manifest"
-					}],
-       manifests: {"https:\/\/data.ng-london.org.uk\/iiif\/0CWR-0001-0000-0000\/manifest":{"provider":"The National Gallery, London UK"}},
+       windows: [{"id":"a","manifestId":"https:\/\/data.getty.edu\/museum\/api\/iiif\/865\/manifest.json"},{"id":"b","manifestId":"https:\/\/data.getty.edu\/museum\/api\/iiif\/248\/manifest.json"},{"id":"c","manifestId":"https:\/\/media.nga.gov\/public\/manifests\/nga_highlights.json","canvasId":"https:\/\/media.nga.gov\/public\/manifests\/canvas\/1225.json"},{"id":"d","manifestId":"https:\/\/iiif.harvardartmuseums.org\/manifests\/object\/299964"},{"id":"e","manifestId":"https:\/\/collections.frick.org\/apis\/iiif\/presentation\/v2\/objects-266\/manifest"},{"id":"f","manifestId":"https:\/\/media.ng-london.org.uk\/iiif\/001-043H-0000\/manifest.json","canvasId":"https:\/\/media.ng-london.org.uk\/public\/manifests\/sequence\/srv\/009-01XE-0000\/normal.json"}],
+       manifests: {"https:\/\/data.getty.edu\/museum\/api\/iiif\/865\/manifest.json":{"provider":"The J. Paul Getty Museum"},"https:\/\/data.getty.edu\/museum\/api\/iiif\/248\/manifest.json":{"provider":"The J. Paul Getty Museum"},"https:\/\/media.nga.gov\/public\/manifests\/nga_highlights.json":{"provider":"National Gallery of Art"},"https:\/\/iiif.harvardartmuseums.org\/manifests\/object\/299964":{"provider":"Harvard Art Museums"},"https:\/\/collections.frick.org\/apis\/iiif\/presentation\/v2\/objects-266\/manifest":{"provider":"The Frick Collection"},"https:\/\/media.ng-london.org.uk\/iiif\/001-043H-0000\/manifest.json":{"provider":"The National Gallery"}},
        
-       
+       workspace: {"layout":{"direction":"row","first":{"first":"a","second":"d","direction":"column"},"second":{"first":{"first":"b","second":"e","direction":"column"},"second":{"first":"c","second":"f","direction":"column"},"direction":"row"},"splitPercentage":33.33}}
        });     
      });
 			function onLoad() {
