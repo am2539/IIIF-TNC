@@ -5,6 +5,9 @@
 		},
 		"https://iiif.vam.ac.uk/collections/O18966/manifest.json": {
 			"provider": "The Victoria and Albert Museum"
+		},
+		"https://collection.sciencemuseumgroup.org.uk/iiif/objects/co124260/manifest": {
+			"provider": "The Science Museum Group"
 		}
 	},
 	"windows": [{
@@ -14,6 +17,9 @@
 		{
 			"manifestId": "https://iiif.vam.ac.uk/collections/O18966/manifest.json",
 			"canvasIndex": 1
+		},
+		{
+			"manifestId": "https://collection.sciencemuseumgroup.org.uk/iiif/objects/co124260/manifest",
+			"canvasIndex": 0
 		}
-	]
-}
+	]	    
