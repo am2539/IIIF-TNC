@@ -5,46 +5,15 @@
 		},
 		"https://iiif.vam.ac.uk/collections/O18966/manifest.json": {
 			"provider": "The Victoria and Albert Museum"
-		},
-		"https://collection.sciencemuseumgroup.org.uk/iiif/objects/co124260/manifest": {
-			"provider": "The Science Museum Group"
 		}
 	},
 	"windows": [{
-			"id": "a",
 			"manifestId": "https://data.ng-london.org.uk/iiif/0CWR-0001-0000-0000/manifest",
 			"canvasIndex": 0
 		},
 		{
-			"id": "c",
 			"manifestId": "https://iiif.vam.ac.uk/collections/O18966/manifest.json",
 			"canvasIndex": 1
-		},
-		{
-			"id": "a",
-			"manifestId": "https://collection.sciencemuseumgroup.org.uk/iiif/objects/co124260/manifest",
-			"canvasIndex": 0
 		}
-	],
-	     "workspace": {
-        "layout": {
-            "direction": "row",
-            "first": {
-                "first": "a",
-                "direction": "column"
-            },
-            "second": {
-                "first": {
-                    "first": "b",
-                    "direction": "column"
-                },
-                "second": {
-                    "first": "c",
-                    "direction": "column"
-                },
-                "direction": "row"
-            },
-            "splitPercentage": 33.33
-	  }
-    }
+	]
 }
