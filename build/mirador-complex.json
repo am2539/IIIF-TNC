@@ -1,30 +1,50 @@
-{
+  {
 	"manifests": {
-		"https://data.ng-london.org.uk/iiif/0CWR-0001-0000-0000/manifest":
-    {"provider": "The National Gallery"}, "https://iiif.vam.ac.uk/collections/O18966/manifest.json":
-    {"provider": "The Victoria and Albert Museum"},"https://media.nga.gov/public/manifests/nga_highlights.json":
-    {"provider": "National Gallery of Art"},"https://iiif.harvardartmuseums.org/manifests/object/299964":
-    {"provider": "Harvard Art Museums"},"https://collections.frick.org/apis/iiif/presentation/v2/objects-266/manifest":
-    {"provider": "The Frick Collection"},"https://media.ng-london.org.uk/iiif/001-043H-0000/manifest.json":
-    {"provider": "The National Gallery"}		
+		"https://data.ng-london.org.uk/iiif/0CWR-0001-0000-0000/manifest": {
+			"provider": "The National Gallery"
 		},
-	"windows": [
-		{ "id": "a",
-			"manifestId": "https://data.ng-london.org.uk/iiif/0CWR-0001-0000-0000/manifest" },
-		{ "id": "b",
-			"manifestId": "https://iiif.vam.ac.uk/collections/O18966/manifest.json" },
-		{ "id": "c",
-			"manifestId": "https://media.nga.gov/public/manifests/nga_highlights.json",
-			"canvasId":"https://media.nga.gov/public/manifests/canvas/1225.json"}
-		],
-  "workspace": {
-    "layout": {
-      "direction": "row",
-      "first": "a"
-      },
-      "second": {
-        "first": "b"
-        }
-      },
-      "splitPercentage": 50.50
-	}
+		"https://iiif.vam.ac.uk/collections/O18966/manifest.json": {
+			"provider": "The Victoria and Albert Museum"
+		},
+		"https://collection.sciencemuseumgroup.org.uk/iiif/objects/co124260/manifest": {
+			"provider": "The Science Museum Group"
+		}
+	},
+	"windows": [{
+			"id": "a",
+			"manifestId": "https://data.ng-london.org.uk/iiif/0CWR-0001-0000-0000/manifest",
+			"canvasIndex": 0
+		},
+		{
+			"id": "c",
+			"manifestId": "https://iiif.vam.ac.uk/collections/O18966/manifest.json",
+			"canvasIndex": 1
+		},
+		{
+			"id": "a",
+			"manifestId": "https://collection.sciencemuseumgroup.org.uk/iiif/objects/co124260/manifest",
+			"canvasIndex": 0
+		}
+	],
+	     "workspace": {
+        "layout": {
+            "direction": "row",
+            "first": {
+                "first": "a",
+                "direction": "column"
+            },
+            "second": {
+                "first": {
+                    "first": "b",
+                    "direction": "column"
+                },
+                "second": {
+                    "first": "c",
+                    "direction": "column"
+                },
+                "direction": "row"
+            },
+            "splitPercentage": 33.33
+	  }
+    }
+}
